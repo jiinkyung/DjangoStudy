@@ -1,7 +1,8 @@
+from fileinput import filelineno
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Blog
 from django.utils import timezone
-from .forms import BlogForm, BlogModelForm
+from .forms import BlogForm, BlogModelForm, CommentForm
 
 def home(request):
     # 블로그 글을 모두 띄우는 코드 (DB의 블로그 객체들을 모두 가져옴)
@@ -64,5 +65,18 @@ def modelformcreate(request):
 def detail(request, blog_id):
     # blog_id 번째 블로그 글을 DB로부터 가져와서
     blog_detail = get_object_or_404(Blog, pk=blog_id)
+
+    comment_form = CommentForm()
+
     # blog_id 번째 블로그 글을 detail.html로 띄우는 코드
-    return render(request, 'detail.html', {'blog_detail' : blog_detail})
+    return render(request, 'detail.html', {'blog_detail' : blog_detail, 'comment_form':comment_form})
+
+def create_comment(request, blog_id):
+    filled_form = CommentForm(request.POST)
+    
+    if filled_form.is_valid():
+        finished_form = filled_form.save(commit=False)
+        finished_form.post = get_object_or_404(Blog, pk=blog_id)
+        finished_form.save()
+
+    return redirect('detail', blog_id)
