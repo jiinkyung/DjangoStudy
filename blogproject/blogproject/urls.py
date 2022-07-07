@@ -15,4 +15,8 @@ urlpatterns = [
 
     # django modelform을 이용해 블로그 객체 만들기
     path('modelformcreate/', views.modelformcreate, name='modelformcreate'),
+
+    path('detail/<int:blog_id>', views.detail, name='detail'),
+
+    # 127.0.0.1:8000/detail/1
 ]

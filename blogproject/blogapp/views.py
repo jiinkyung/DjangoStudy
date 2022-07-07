@@ -1,5 +1,4 @@
-import imp
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Blog
 from django.utils import timezone
 from .forms import BlogForm, BlogModelForm
@@ -61,3 +60,9 @@ def modelformcreate(request):
 
     # render의 세번째 인자로 views.py 내의 데이터를 html에 넘겨줄 수 있는데, 이 때 딕셔너리 자료형으로 넘겨줘야함.
     return render(request, 'form_create.html', {'form' :form})
+
+def detail(request, blog_id):
+    # blog_id 번째 블로그 글을 DB로부터 가져와서
+    blog_detail = get_object_or_404(Blog, pk=blog_id)
+    # blog_id 번째 블로그 글을 detail.html로 띄우는 코드
+    return render(request, 'detail.html', {'blog_detail' : blog_detail})

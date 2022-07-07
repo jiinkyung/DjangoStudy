@@ -5,7 +5,7 @@
 <!--{{ posts }} : QuerySet (= 데이터베이스로부터 전달받은 객체 목록) 형태로 보여지게 됨 -->
 <!--템플릿 언어를 이용해 for 문을 통해 하나하나 찍어주는 과정 필요-->
 {% for post in posts %}
-    <h3>제목: {{ post.title }}</h3>
+    <a href="{% url 'detail' post.id %}"><h3>제목: {{ post.title }}</h3></a>
     <h4>작성날짜: {{ post.date }}</h4>
 
 {% endfor %}
