@@ -11,6 +11,9 @@
 
 ![image](https://user-images.githubusercontent.com/89904767/177316171-df03c179-bfc7-4a3d-96f6-66ce69f27382.png)
 
+<hr>
+<br><br>
+<hr>
 <h2> [Project2-1] 개발자 대나무숲 프로젝트 준비하기 </h2>
 
 <h3> 사용자 입력받기 - Forms </h3>
@@ -41,3 +44,5 @@
 
 ![login 후](https://user-images.githubusercontent.com/89904767/177819756-a559166a-9e72-4238-aba3-f5a6a076d638.png)
 
+<hr>
+<br><br>
