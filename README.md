@@ -46,3 +46,35 @@
 
 <hr>
 <br><br>
+<hr>
+<h2> [Project2-2] 개발자 대나무숲 프로젝트</h2>
+<h3> 익명게시판 메인화면 </h3>
+
+![메인화면](https://user-images.githubusercontent.com/89904767/178994602-6b913252-01aa-4e20-a48a-43a217b84e3b.png)
+
+<h3> 자유게시판 메인화면 </h3>
+
+![자유게시판 메인](https://user-images.githubusercontent.com/89904767/178994607-a9631bb9-bc5c-429b-8c70-3afb2d84b686.png)
+<h3> 로그인 화면 </h3>
+
+![로그인 화면](https://user-images.githubusercontent.com/89904767/178994612-7d2be91e-6d00-4240-86b9-5c1d7b6bc2d3.png)
+<h3> 구글 로그인 </h3>
+
+![구글 로그인](https://user-images.githubusercontent.com/89904767/178994610-1cc13b09-1a95-4215-93b2-4743f704761e.png)
+
+<h2> [Project3] 영화 리뷰 웹서비스 프로젝트</h2>
+
+<h3> 메인 화면 </h3>
+
+![최종화면](https://user-images.githubusercontent.com/89904767/178995103-e320eb51-6f38-4802-a0ad-a6940e807dad.png)
+<h3> 세부 화면 </h3>
+
+![화면 캡처 2022-07-14 222425](https://user-images.githubusercontent.com/89904767/178995116-0289229d-a417-4bea-b298-b1d273c8742c.png)
+
+<h3>검색 결과 화면</h3>
+
+![검색결과](https://user-images.githubusercontent.com/89904767/178995124-f30b36ed-9563-41bc-8529-df3566221118.png)
+
+<h3>배포 화면</h3>
+
+![배포화면](https://user-images.githubusercontent.com/89904767/178995128-38b94b40-56ef-49f6-8570-1b55a9b34590.png)
