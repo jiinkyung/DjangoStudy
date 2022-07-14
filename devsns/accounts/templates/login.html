@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,9 +59,13 @@
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
                                             </div>
                                         </div>
-                                        <input type="submit" value="login!" class="btn btn-success btn-user btn-block"></input>                                      
+                                        <input type="submit" value="login!" class="btn btn-success btn-user btn-block"></input>  
+                                        <hr>
+                                        <a href="{% provider_login_url 'google' %}" class="btn btn-google btn-user btn-block">
+                                            <i class="fab fa-google fa-fw"></i> 구글 계정으로 로그인
+                                        </a>                                    
                                     </form>
-                                    <hr>
+                                  
                                     <div class="text-center">
                                         <a class="small" href="{% url 'signup' %}">Create an Account!</a>
                                     </div>
