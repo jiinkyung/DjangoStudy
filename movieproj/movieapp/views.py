@@ -29,8 +29,11 @@ def home(request):
 
 def detail(request, movie_id):
     # https://api.themoviedb.org/3/movie/300?api_key=f2a8424e40bf3e57b995e2c750a52465&language=en-US
-    url = 'https://api.themoviedb.org/3/movie/' + movie_id +'?api_key=' + my_id
-  
+    url = 'https://api.themoviedb.org/3/movie/' + movie_id +'?api_key='+my_id
     response = requests.get(url)
     resdata = response.text
+    resdata = json.loads(resdata)
     return render(request, 'detail.html', {"resdata":resdata})
+
+
+    
