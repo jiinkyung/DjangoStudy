@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import PostForm
 from .models import Post
 
@@ -23,3 +23,8 @@ def postcreate(request):
         # form 입력 html 띄우기 
         form = PostForm()
     return render(request, 'post_form.html', {'form':form}) # post_form.html에서 form을 {{ form }} 형태로 받게 됨. 
+
+def detail(request, post_id):
+    post_detail = get_object_or_404(Post, pk=post_id)
+    return render(request, 'detail.html', {'post_detail':post_detail})
+    
