@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-
-
-<h1>제목: {{ post_detail.title }}</h1>
-<h2>작성날짜: {{ post_detail.date }}</h2>
-
-<p>본문: {{ post_detail.body }}</p>
+<h2 class="alert alert-primary"> {{ post_detail.title }}</h2>
+<span class="badge rounded-pill bg-light">{{ post_detail.date}}</span>
+<br/><hr/>
+<p>
+    {{ post_detail.body }}
+</p>
+<br/><hr/>
 
 <!--댓글 목록 공간-->
 {% for comment in post_detail.comment_set.all %}
@@ -17,7 +18,7 @@
 <form method="POST" action="{% url 'new_comment' post_detail.id %}">
     {% csrf_token %}
     {{ comment_form }}
-    <input type="submit" value="댓글 입력"> 
+    <input type="submit" class="btn btn-primary btn-icon-split btn-sm" value="댓글 입력"> 
 </form>
 
 
