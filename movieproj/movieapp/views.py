@@ -1,8 +1,8 @@
 from django.shortcuts import render
 import requests
 import json
+from my_id import my_id
 
-my_id='f2a8424e40bf3e57b995e2c750a52465'
 
 def home(request):
     url = 'https://api.themoviedb.org/3/trending/movie/week?api_key='+my_id
